@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACASO — Financial Operations Agent</title>
+  <meta name="description" content="ACASO automatically reviews contracts, invoices, payments, and receivables to identify discrepancies, prevent revenue leakage, and prepare recovery actions before issues become losses.">
+  <meta property="og:title" content="ACASO — Financial Operations Agent">
+  <meta property="og:description" content="Find what your finance team can't see.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════════════ NAV ════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+        <path d="M 33.2 15.2 A 14 14 0 1 1 24.8 6.8" stroke="#0d1117" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M 24.8 6.8 A 14 14 0 0 1 33.2 15.2" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      ACASO
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#capabilities" class="nav-link">Capabilities</a>
+      <a href="#trust" class="nav-link">Trust</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+    <button class="nav-btn" data-demo>Book Demo</button>
+    <button class="nav-hamburger" id="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#how-it-works">How It Works</a>
+  <a href="#capabilities">Capabilities</a>
+  <a href="#trust">Trust</a>
+  <a href="#faq">FAQ</a>
+  <button class="m-cta" data-demo>Book Demo</button>
+</div>
+
+<main>
+
+<!-- ════════════ HERO ════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-cols">
+
+    <!-- Left column -->
+    <div>
+      <div class="hero-tag">
+        <span class="hero-dot"></span>
+        Financial Operations Agent
+      </div>
+      <div class="whatif-wrap">
+        <span id="whatif"></span>
+      </div>
+      <h1 class="hero-h1">Find what your<br>finance team<br>can't see.</h1>
+      <p class="hero-sub">ACASO automatically reviews contracts, invoices, payments, and receivables to identify discrepancies, prevent revenue leakage, and prepare recovery actions before issues become losses.</p>
+      <div class="hero-ctas">
+        <button class="btn-dark" data-demo>Book Demo</button>
+        <a href="#how-it-works" class="btn-outline">See How It Works</a>
+      </div>
+    </div>
+
+    <!-- Right column: product card -->
+    <div class="hero-card">
+      <div class="card-header">
+        <span class="card-title">CONTRACT_RECONCILIATION_REPORT</span>
+        <span class="badge-red">DISCREPANCY</span>
+      </div>
+      <div class="card-metrics">
+        <div>
+          <div class="m-label">Contract Rate</div>
+          <div class="m-val">$10,000</div>
+        </div>
+        <div>
+          <div class="m-label">Invoice Charge</div>
+          <div class="m-val">$12,500</div>
+        </div>
+        <div>
+          <div class="m-label">Difference</div>
+          <div class="m-val red">+$2,500</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="crow">
+          <div class="crow-label">Source</div>
+          <div class="crow-val">MSA Section 4.2</div>
+        </div>
+        <div class="crow">
+          <div class="crow-label">Finding</div>
+          <div class="crow-val">Rate exceeds contracted pricing.</div>
+        </div>
+        <div class="crow">
+          <div class="crow-label">Recommended Action</div>
+          <div class="crow-val green">Generate dispute letter.</div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="ca-approve">Approve &amp; Send</button>
+        <button class="ca-review">Review Evidence</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Operating Principles bar -->
+  <div class="wrap">
+    <div class="principles up" style="transition-delay:.1s">
+      <div class="op-header">
+        <span class="op-header-l">Operating Principles // 04</span>
+        <span class="op-header-r">Verified</span>
+      </div>
+      <div class="op-grid">
+        <div class="op-item">
+          <div class="op-meta">
+            <span class="op-num">/ 01</span>
+            <span class="op-cat">Human-In-The-Loop</span>
+          </div>
+          <div class="op-row">
+            <span class="op-check">✓</span>
+            <div>
+              <div class="op-title">Human approval required</div>
+              <div class="op-desc">Every action is reviewed and approved by your team before execution.</div>
+            </div>
+          </div>
+        </div>
+        <div class="op-item">
+          <div class="op-meta">
+            <span class="op-num">/ 02</span>
+            <span class="op-cat">Evidence-Backed</span>
+          </div>
+          <div class="op-row">
+            <span class="op-check">✓</span>
+            <div>
+              <div class="op-title">Backed by source documents</div>
+              <div class="op-desc">Findings cite the exact contract clause, invoice line, or record.</div>
+            </div>
+          </div>
+        </div>
+        <div class="op-item">
+          <div class="op-meta">
+            <span class="op-num">/ 03</span>
+            <span class="op-cat">Operator-First</span>
+          </div>
+          <div class="op-row">
+            <span class="op-check">✓</span>
+            <div>
+              <div class="op-title">Built for finance teams</div>
+              <div class="op-desc">No prompts, no model tuning. Designed for controllers, not AI experts.</div>
+            </div>
+          </div>
+        </div>
+        <div class="op-item">
+          <div class="op-meta">
+            <span class="op-num">/ 04</span>
+            <span class="op-cat">Full Traceability</span>
+          </div>
+          <div class="op-row">
+            <span class="op-check">✓</span>
+            <div>
+              <div class="op-title">Complete audit trail</div>
+              <div class="op-desc">Every review, edit, and approval is logged and exportable.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ INTEGRATIONS ════════════ -->
+<div class="int-section">
+  <div class="wrap">
+    <div class="int-inner">
+      <span class="int-label">Connects with</span>
+      <div class="int-divider"></div>
+      <div class="int-badges">
+        <span class="int-badge">NetSuite</span>
+        <span class="int-badge">QuickBooks</span>
+        <span class="int-badge">Sage</span>
+        <span class="int-badge">SAP</span>
+        <span class="int-badge">Xero</span>
+        <span class="int-badge">Salesforce</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ HOW IT WORKS ════════════ -->
+<section class="how-section" id="how-it-works">
+  <div class="wrap">
+    <div class="tag up" style="margin-bottom:10px;text-align:center">Protocol // End_To_End</div>
+    <h2 class="section-h up" style="transition-delay:.05s;text-align:center">How ACASO Works</h2>
+
+    <div class="how-outer up" style="transition-delay:.1s">
+
+      <div class="vt-sidebar">
+        <div class="vt-dot"><div class="flow-node">01</div><div class="vt-line"></div></div>
+        <div class="vt-dot"><div class="flow-node">02</div><div class="vt-line"></div></div>
+        <div class="vt-dot"><div class="flow-node">03</div><div class="vt-line"></div></div>
+        <div class="vt-dot"><div class="flow-node">04</div><div class="vt-line"></div></div>
+        <div class="vt-dot"><div class="flow-node">05</div></div>
+      </div>
+
+      <div class="steps-content">
+        <div class="steps-top">
+          <div class="step-card">
+            <div class="step-num">Step / 01</div>
+            <div class="step-title">Documents Come In</div>
+            <p class="step-desc">Invoices, contracts, payment records, receivables, and financial documents enter ACASO through:</p>
+            <ul class="step-list">
+              <li>Email forwarding</li>
+              <li>Shared drive integrations</li>
+              <li>ERP integrations</li>
+              <li>Direct uploads</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-num">Step / 02</div>
+            <div class="step-title">ACASO Understands</div>
+            <p class="step-desc">ACASO extracts and organizes:</p>
+            <ul class="step-list">
+              <li>Vendor relationships</li>
+              <li>Pricing schedules</li>
+              <li>Contract obligations</li>
+              <li>Payment terms</li>
+              <li>Receivables</li>
+              <li>Financial activity</li>
+            </ul>
+          </div>
+        </div>
+        <div class="steps-bot">
+          <div class="step-card">
+            <div class="step-num">Step / 03</div>
+            <div class="step-title">ACASO Reviews</div>
+            <p class="step-desc">Every record is checked for:</p>
+            <ul class="step-list">
+              <li>Overbilling</li>
+              <li>Duplicate charges</li>
+              <li>Contract violations</li>
+              <li>Missed discounts</li>
+              <li>Overdue receivables</li>
+              <li>Compliance issues</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-num">Step / 04</div>
+            <div class="step-title">ACASO Prepares Action</div>
+            <p class="step-desc">Every finding includes:</p>
+            <ul class="step-list">
+              <li>Supporting evidence</li>
+              <li>Source documents</li>
+              <li>Recommended next steps</li>
+              <li>Ready-to-review communications</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-num">Step / 05</div>
+            <div class="step-title">Human Approval</div>
+            <p class="step-desc">Review, edit, approve, and send.</p>
+            <ul class="step-list">
+              <li>Nothing is executed without approval.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /how-outer -->
+  </div>
+</section>
+
+<!-- ════════════ PRODUCT TOUR ════════════ -->
+<section class="tour-section" id="tour">
+  <div class="wrap">
+    <div class="tour-header up">
+      <div class="tag">PRODUCT // SEE_IT_IN_ACTION</div>
+      <h2 class="section-h">Everything your team needs,<br>in one place.</h2>
+    </div>
+    <div class="tour-body">
+      <div class="tour-tabs" id="tour-tabs">
+        <button class="tour-tab active" data-tour="0">
+          <span class="tab-dot">●</span>
+          <div class="tab-text">
+            <span class="tab-label">Audit Portal</span>
+            <span class="tab-desc">Every discrepancy surfaced and flagged automatically</span>
+          </div>
+        </button>
+        <button class="tour-tab" data-tour="1">
+          <span class="tab-dot">●</span>
+          <div class="tab-text">
+            <span class="tab-label">AI Dispute Drafts</span>
+            <span class="tab-desc">One-click vendor dispute emails, ready to send</span>
+          </div>
+        </button>
+        <button class="tour-tab" data-tour="2">
+          <span class="tab-dot">●</span>
+          <div class="tab-text">
+            <span class="tab-label">Contract Library</span>
+            <span class="tab-desc">Every contract stored and matched against invoices</span>
+          </div>
+        </button>
+        <button class="tour-tab" data-tour="3">
+          <span class="tab-dot">●</span>
+          <div class="tab-text">
+            <span class="tab-label">Obligation Tracking</span>
+            <span class="tab-desc">Deliverables, compliance terms, and penalties — all monitored</span>
+          </div>
+        </button>
+        <button class="tour-tab" data-tour="4">
+          <span class="tab-dot">●</span>
+          <div class="tab-text">
+            <span class="tab-label">Contract Tracking</span>
+            <span class="tab-desc">Payment schedules for all active contracts</span>
+          </div>
+        </button>
+      </div>
+      <div class="tour-screen">
+        <div class="screen-frame">
+          <img class="tour-img active" src="demo/audit.png" alt="Audit Portal — Executive Authorization Portal showing flagged invoice discrepancies">
+          <img class="tour-img" src="demo/email.png" alt="AI Dispute Drafts — ACASO-drafted vendor dispute email with evidence">
+          <img class="tour-img" src="demo/contract-library.png" alt="Contract Library — contracts stored and matched against invoices">
+          <img class="tour-img" src="demo/obligations.png" alt="Obligation Tracking — deliverables, compliance, and penalties per contract">
+          <img class="tour-img" src="demo/tracking.png" alt="Contract Tracking — payment schedules for active contracts">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ EXAMPLE FINDING ════════════ -->
+<section class="example-section" id="example">
+  <div class="wrap">
+    <div class="example-cols">
+      <div class="up">
+        <div class="tag" style="margin-bottom:18px">Example_Finding</div>
+        <h2 class="example-h">Every finding is<br>backed by evidence.</h2>
+        <p class="example-p">No black-box AI decisions. ACASO cites the contract clause, the invoice line, and the recommended next step — so your team can verify and approve in seconds, not hours.</p>
+        <div class="checks">
+          <div class="check-row"><span class="ck">✓</span> Cited contract sections</div>
+          <div class="check-row"><span class="ck">✓</span> Linked source documents</div>
+          <div class="check-row"><span class="ck">✓</span> Recommended action drafted</div>
+        </div>
+      </div>
+
+      <div class="finding-card up" style="transition-delay:.1s;">
+        <img src="demo/email-draft.png" alt="ACASO AI-drafted vendor dispute email with evidence" style="width:100%;display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ WHY FINANCE TEAMS USE ACASO ════════════ -->
+<section class="compare-section" id="why-acaso">
+  <div class="wrap">
+    <div class="tag up">The_Review_Problem</div>
+    <h2 class="section-h up" style="transition-delay:.05s">Why Finance Teams<br>Use ACASO</h2>
+    <p class="section-sub up" style="transition-delay:.1s">Most companies don't have a visibility problem. They have a review problem.</p>
+
+    <table class="compare-table up" style="transition-delay:.12s">
+      <thead>
+        <tr>
+          <th>Workflow</th>
+          <th>Without ACASO</th>
+          <th>With ACASO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Invoice Review</td>
+          <td>Manual invoice reviews</td>
+          <td>Automated verification</td>
+        </tr>
+        <tr>
+          <td>Contract Terms</td>
+          <td>Buried in PDFs</td>
+          <td>Tracked automatically</td>
+        </tr>
+        <tr>
+          <td>Aging Reports</td>
+          <td>Sit untouched</td>
+          <td>Collection workflows prepared</td>
+        </tr>
+        <tr>
+          <td>Financial Issues</td>
+          <td>Discovered too late</td>
+          <td>Surfaced before action is taken</td>
+        </tr>
+        <tr>
+          <td>Evidence Gathering</td>
+          <td>Teams spend hours</td>
+          <td>Packaged automatically</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════ CAPABILITIES ════════════ -->
+<section class="cap-section" id="capabilities">
+  <div class="wrap">
+    <div class="tag up" style="text-align:center">Capabilities // 03_Modules</div>
+    <h2 class="section-h up" style="transition-delay:.05s;text-align:center">One platform, three<br>operating layers.</h2>
+
+    <div class="cap-grid up" style="transition-delay:.1s">
+      <div class="cap-card">
+        <div class="cap-mod">Module / 01</div>
+        <div class="cap-cat">Contract &amp; Invoice Audit</div>
+        <div class="cap-h">Every charge,<br>verified.</div>
+        <p class="cap-p">Compare invoices against negotiated pricing, amendments, billing schedules, and contractual obligations.</p>
+        <hr class="cap-hr">
+        <div class="cap-dl">Detects</div>
+        <ul class="cap-list">
+          <li>Overcharges</li>
+          <li>Duplicate billing</li>
+          <li>Unauthorized fees</li>
+          <li>Tax discrepancies</li>
+          <li>Pricing violations</li>
+        </ul>
+      </div>
+      <div class="cap-card">
+        <div class="cap-mod">Module / 02</div>
+        <div class="cap-cat">Receivables Operations</div>
+        <div class="cap-h">Know who owes you<br>and what to do next.</div>
+        <p class="cap-p">Monitor outstanding invoices, prioritize collection efforts, and generate escalation-ready collection workflows.</p>
+        <hr class="cap-hr">
+        <div class="cap-dl">Detects</div>
+        <ul class="cap-list">
+          <li>Overdue balances</li>
+          <li>Payment delays</li>
+          <li>High-risk accounts</li>
+          <li>Collection opportunities</li>
+        </ul>
+      </div>
+      <div class="cap-card">
+        <div class="cap-mod">Module / 03</div>
+        <div class="cap-cat">Financial Oversight</div>
+        <div class="cap-h">Nothing slips<br>through the cracks.</div>
+        <p class="cap-p">Track financial obligations, payment deadlines, unresolved disputes, contract changes, and operational risks from a single system.</p>
+        <hr class="cap-hr">
+        <div class="cap-dl">Detects</div>
+        <ul class="cap-list">
+          <li>Obligation tracking</li>
+          <li>Deadline monitoring</li>
+          <li>Dispute status</li>
+          <li>Contract changes</li>
+          <li>Operational risk</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ TRUST & SECURITY ════════════ -->
+<section class="trust-section" id="trust">
+  <div class="wrap">
+    <div class="trust-cols">
+      <div class="up">
+        <div class="tag" style="margin-bottom:18px">Trust_&amp;_Security</div>
+        <h2 class="trust-h">Built for sensitive<br>financial data.</h2>
+        <p class="trust-p">ACASO is designed to help finance teams maintain control while increasing visibility. Every action is reviewable, every record is traceable, and your data never leaves the boundaries you define.</p>
+      </div>
+      <div class="trust-features up" style="transition-delay:.1s">
+        <div class="trust-row">
+          <div class="tf-name">Encrypted Document Storage</div>
+          <div class="tf-desc">Documents are encrypted at rest and in transit.</div>
+        </div>
+        <div class="trust-row">
+          <div class="tf-name">Organization-Level Access Controls</div>
+          <div class="tf-desc">Role-based permissions across teams and entities.</div>
+        </div>
+        <div class="trust-row">
+          <div class="tf-name">Human Approval Workflows</div>
+          <div class="tf-desc">No action is executed without explicit approval.</div>
+        </div>
+        <div class="trust-row">
+          <div class="tf-name">Complete Audit History</div>
+          <div class="tf-desc">Every review, edit, and approval is logged.</div>
+        </div>
+        <div class="trust-row">
+          <div class="tf-name">Secure Document Retention</div>
+          <div class="tf-desc">Configurable retention aligned to your policies.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FAQ ════════════ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="faq-hdr up">
+      <div class="tag green" style="margin-bottom:14px">FAQ // Answered</div>
+      <h2 class="faq-h">Questions, answered.</h2>
+    </div>
+    <div class="faq-list up" style="transition-delay:.08s">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">01</span>
+          <span class="faq-qt">Why is ACASO called ACASO?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">"Acaso" translates to "perhaps" or "what if" in Spanish. We built ACASO to eliminate the financial uncertainty businesses face every day by answering those questions before they become costly problems.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">02</span>
+          <span class="faq-qt">What financial records can ACASO review?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">Contracts, invoices, payment records, bank statements, accounts receivable reports, amendments, and supporting financial documentation.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">03</span>
+          <span class="faq-qt">How do documents get into ACASO?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">Documents can be uploaded directly, forwarded by email, synchronized from shared drives, or connected through ERP and accounting integrations.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">04</span>
+          <span class="faq-qt">What types of issues can ACASO identify?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">Overbilling, duplicate charges, contract violations, missed discounts, overdue receivables, payment discrepancies, compliance risks, and other forms of financial leakage.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">05</span>
+          <span class="faq-qt">Does ACASO replace our finance team?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">No. ACASO acts as a financial operations layer that continuously reviews activity and prepares recommended actions. Your team remains in control of all decisions and approvals.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">06</span>
+          <span class="faq-qt">Does ACASO take action automatically?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">No. Every dispute, reminder, collection notice, and recovery workflow is reviewed and approved before execution.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">07</span>
+          <span class="faq-qt">How are findings verified?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">Every finding is linked to supporting source documents and includes evidence explaining why it was flagged.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-n">08</span>
+          <span class="faq-qt">Is our data used to train AI models?</span>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-ans">No. Customer financial records and documents are not used to train public AI models.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FINAL CTA ════════════ -->
+<section class="cta-section" id="cta">
+  <div class="wrap">
+    <div class="cta-tag up">Eliminate_The_What_Ifs</div>
+    <h2 class="cta-h up" style="transition-delay:.05s">Leave no financial<br>"what ifs."</h2>
+    <p class="cta-p up" style="transition-delay:.1s">ACASO continuously reviews contracts, invoices, payments, and receivables to identify financial leakage, surface risks, and prepare recovery actions before money is lost.</p>
+    <div class="cta-form up" style="transition-delay:.14s">
+      <input type="email" class="cta-input" placeholder="work_email@company.com">
+      <button class="cta-submit">Book Demo</button>
+    </div>
+    <div class="cta-sub up" style="transition-delay:.18s">Find what your finance team can't see.</div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-main">
+      <div>
+        <div class="foot-logo">
+          <svg width="22" height="22" viewBox="0 0 40 40" fill="none">
+            <path d="M 33.2 15.2 A 14 14 0 1 1 24.8 6.8" stroke="#0d1117" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 24.8 6.8 A 14 14 0 0 1 33.2 15.2" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          ACASO
+        </div>
+        <p class="foot-tag">Financial operations agent.<br>Eliminating the "what ifs"<br>for finance teams.</p>
+      </div>
+      <div>
+        <div class="foot-col-h">Product</div>
+        <div class="foot-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#trust">Trust</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-h">Company</div>
+        <div class="foot-links">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-h">Legal</div>
+        <div class="foot-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">DPA</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">© 2026 ACASO Systems Inc.</span>
+      <div class="foot-status">
+        <div class="s-dot"></div>
+        Status: Operational
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════ DEMO REQUEST MODAL ════════════ -->
+<div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+
+    <!-- Step 1 -->
+    <div class="modal-step active" id="modal-step-1">
+      <div class="modal-progress">
+        <div class="modal-pip done" id="pip-1"></div>
+        <div class="modal-pip" id="pip-2"></div>
+      </div>
+      <div class="modal-tag">● Request a Demo</div>
+      <div class="modal-h">Let's get started.</div>
+      <p class="modal-sub">Tell us a bit about yourself and we'll set up the right demo for your team.</p>
+      <div class="modal-fields">
+        <div class="modal-field">
+          <label class="modal-label" for="m-name">Full Name</label>
+          <input class="modal-input" id="m-name" type="text" placeholder="Jane Smith" autocomplete="name">
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="m-email">Work Email</label>
+          <input class="modal-input" id="m-email" type="email" placeholder="jane@company.com" autocomplete="email">
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="m-company">Company</label>
+          <input class="modal-input" id="m-company" type="text" placeholder="Acme Corp" autocomplete="organization">
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="m-role">Your Role</label>
+          <select class="modal-select" id="m-role">
+            <option value="" disabled selected>Select your role</option>
+            <option>CFO</option>
+            <option>Controller</option>
+            <option>Finance Manager</option>
+            <option>Founder / CEO</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <button class="modal-btn" id="modal-next">→ Continue</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="modal-step" id="modal-step-2">
+      <div class="modal-progress">
+        <div class="modal-pip done"></div>
+        <div class="modal-pip done"></div>
+      </div>
+      <div class="modal-tag">● What Are You Trying to Solve?</div>
+      <div class="modal-h">What matters most?</div>
+      <p class="modal-sub">Select everything relevant — we'll tailor the demo to your priorities.</p>
+      <div class="modal-checks">
+        <label class="modal-check"><input type="checkbox" value="Contract & invoice auditing"> Contract &amp; invoice auditing</label>
+        <label class="modal-check"><input type="checkbox" value="Receivables tracking"> Receivables tracking</label>
+        <label class="modal-check"><input type="checkbox" value="Obligation monitoring"> Obligation monitoring</label>
+        <label class="modal-check"><input type="checkbox" value="Financial oversight"> Financial oversight</label>
+      </div>
+      <div class="modal-field" style="margin-bottom:24px">
+        <label class="modal-label" for="m-context">Anything else to share? <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+        <textarea class="modal-textarea" id="m-context" placeholder="e.g. We process 500+ invoices a month and struggle with vendor overcharges..."></textarea>
+      </div>
+      <button class="modal-btn" id="modal-submit">→ Submit Request</button>
+    </div>
+
+    <!-- Step 3: Success -->
+    <div class="modal-step modal-success" id="modal-step-3">
+      <div class="modal-check-icon">✓</div>
+      <div class="modal-h">Request received.</div>
+      <p class="modal-sub" style="margin-top:10px">We'll be in touch within 1 business day to schedule your demo.<br>In the meantime, explore how ACASO works.</p>
+      <span class="modal-back" id="modal-back">← Back to site</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
