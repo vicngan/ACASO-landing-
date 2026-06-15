@@ -1,3 +1,31 @@
+/* ── Hero typewriter ── */
+(function () {
+  const el = document.getElementById('hero-typed');
+  if (!el) return;
+  const segments = ['Find what your', '<br>', 'finance team', '<br>', "can't see."];
+  let html = '';
+  let si = 0;
+  let ci = 0;
+  function tick() {
+    const seg = segments[si];
+    if (seg === '<br>') {
+      html += '<br>';
+      el.innerHTML = html;
+      si++; ci = 0;
+      setTimeout(tick, 60);
+    } else if (ci < seg.length) {
+      html += seg[ci];
+      el.innerHTML = html;
+      ci++;
+      setTimeout(tick, 48);
+    } else {
+      si++; ci = 0;
+      if (si < segments.length) setTimeout(tick, 60);
+    }
+  }
+  setTimeout(tick, 300);
+})();
+
 /* ── Hamburger menu ── */
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -112,17 +140,41 @@ document.getElementById('modal-next').addEventListener('click', () => {
 });
 
 document.getElementById('modal-submit').addEventListener('click', () => {
+  const submitBtn = document.getElementById('modal-submit');
   const checks = [...document.querySelectorAll('.modal-checks input:checked')].map(c => c.value);
   const data = {
     name:    document.getElementById('m-name').value.trim(),
     email:   document.getElementById('m-email').value.trim(),
     company: document.getElementById('m-company').value.trim(),
     role:    document.getElementById('m-role').value,
-    goals:   checks,
+    goals:   checks.join(', '),
     context: document.getElementById('m-context').value.trim(),
   };
-  console.log('[ACASO Demo Request]', data);
-  showModalStep(3);
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  fetch('https://formspree.io/f/maqzvorq', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data),
+  })
+    .then(res => res.json())
+    .then(result => {
+      if (result.ok) {
+        showModalStep(3);
+      } else {
+        const msg = result.errors?.map(e => e.message).join(', ') || 'Submission failed. Please try again.';
+        alert(msg);
+        submitBtn.disabled = false;
+        submitBtn.textContent = '→ Submit Request';
+      }
+    })
+    .catch(() => {
+      alert('Network error. Please check your connection and try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = '→ Submit Request';
+    });
 });
 
 document.getElementById('modal-close').addEventListener('click', closeModal);

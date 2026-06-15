@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- main arc (dark, almost full circle) -->
+  <path d="M 33.2 15.2 A 14 14 0 1 1 24.8 6.8" stroke="#0d1117" stroke-width="5" stroke-linecap="round"/>
+  <!-- accent arc (blue, short segment closing the gap) -->
+  <path d="M 24.8 6.8 A 14 14 0 0 1 33.2 15.2" stroke="#3b82f6" stroke-width="5" stroke-linecap="round"/>
+</svg>
